@@ -1,7 +1,19 @@
-# Node.js
+# Logs
+logs/
+*.log
+
+# Dependency directories
 node_modules/
 
-logs/
+# Build directories
+dist/
+build/
 
-allure-report/
+# Playwright output
+playwright-report/
+test-results/
 allure-results/
+allure-report/
+
+# Environment variables
+.env
