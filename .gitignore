@@ -1,0 +1,7 @@
+# Node.js
+node_modules/
+
+logs/
+
+allure-report/
+allure-results/
