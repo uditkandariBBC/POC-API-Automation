@@ -7,7 +7,7 @@ test.describe('Authentication Tests', () => {
     await apiUtils.initialize();
     await apiUtils.fetchAuthToken();
 
-    const token = apiUtils.getAuthToken();
+    const token = apiUtils.fetchAuthToken();
     expect(token).toBeDefined();
     expect(token).not.toBe('');
 

@@ -30,9 +30,9 @@ export const test = baseTest.extend<MyFixtures>({
       'POST',
       '/booking',
       newBooking,
-      undefined, // No query parameters
-      undefined, // No additional headers
-      false, // RequiresAuth explicitly set to false
+      undefined,
+      undefined,
+      false,
     );
     const bookingId = createResponse.body.bookingid;
     if (!bookingId) {

@@ -17,3 +17,5 @@ allure-report/
 
 # Environment variables
 .env
+
+reports/
