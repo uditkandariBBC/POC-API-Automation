@@ -5,17 +5,14 @@ logs/
 # Dependency directories
 node_modules/
 
-# Build directories
-dist/
-build/
-
 # Playwright output
 playwright-report/
 test-results/
 allure-results/
 allure-report/
+reports/
 
 # Environment variables
 .env
 
-reports/
+
