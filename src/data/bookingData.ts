@@ -29,13 +29,3 @@ export const partialUpdate: Partial<Booking> = {
   lastname: 'Doe',
 };
 
-// export const invalidBooking: Partial<Booking> = {
-//   firstname: 'John',
-//   totalprice: 123,
-//   depositpaid: true,
-//   bookingdates: {
-//     checkin: '2023-01-01',
-//     checkout: '2023-01-02',
-//   },
-//   additionalneeds: 'Breakfast',
-// };

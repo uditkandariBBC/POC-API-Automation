@@ -1,7 +1,7 @@
 # Logs
 logs/
 *.log
-
+*.html
 # Dependency directories
 node_modules/
 
@@ -10,7 +10,7 @@ playwright-report/
 test-results/
 allure-results/
 allure-report/
-reports/
+src/reports/*
 
 # Environment variables
 .env

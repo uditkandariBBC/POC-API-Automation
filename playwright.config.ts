@@ -14,7 +14,7 @@ if (fs.existsSync('.env')) {
 
 const playwrightConfig: PlaywrightTestConfig = {
   testDir: './src/tests',
-  timeout: 30000, // Adjust timeout based on the project's needs
+  timeout: 30000, 
   use: {
     baseURL: ENV.baseURL,
     extraHTTPHeaders: {
