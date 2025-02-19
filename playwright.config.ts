@@ -7,14 +7,12 @@ import { ENV } from './src/config/env';
 if (fs.existsSync('.env')) {
   dotenv.config();
 } else {
-  throw new Error(
-    '.env file not found. Please ensure it exists and is properly configured.',
-  );
+  console.warn('.env file not found. Using default settings.');
 }
 
 const playwrightConfig: PlaywrightTestConfig = {
   testDir: './src/tests',
-  timeout: 30000, 
+  timeout: 30000,
   use: {
     baseURL: ENV.baseURL,
     extraHTTPHeaders: {

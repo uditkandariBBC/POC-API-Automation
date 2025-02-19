@@ -12,9 +12,13 @@ type MyFixtures = {
 export const test = baseTest.extend<MyFixtures>({
   apiClient: async ({ request }, use, testInfo) => {
     const apiUtils = new ApiUtils();
-    logger.info('Initializing API client...');
-    await apiUtils.initialize();
-    logger.info('API client initialized successfully.');
+    try {
+      logger.info('Initializing API client...');
+      await apiUtils.initialize();
+      logger.info('API client initialized successfully.');
+    } catch (error) {
+      logger.error(`API client initialization failed: ${error}`);
+    }
     await use(apiUtils);
     logger.info(
       `Test '${testInfo.title}' completed with status: ${testInfo.status?.toUpperCase()}`,

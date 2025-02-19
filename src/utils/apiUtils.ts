@@ -8,14 +8,20 @@ export class ApiUtils {
 
   // Initializes the API context with default headers and base URL
   async initialize() {
-    logger.info('Initializing API context with base URL: ' + ENV.baseURL);
-    this.apiContext = await request.newContext({
-      baseURL: ENV.baseURL,
-      extraHTTPHeaders: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    });
+    try {
+      if (!ENV.baseURL)
+        throw new Error('Base URL is missing in Environment file');
+      logger.info(`Initializing API context with base URL: ${ENV.baseURL}`);
+      this.apiContext = await request.newContext({
+        baseURL: ENV.baseURL,
+        extraHTTPHeaders: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+      });
+    } catch (error) {
+      logger.error(`API Context initialization failed: ${error}`);
+    }
   }
 
   // Ensures the API context has been initialized before making requests
@@ -164,7 +170,7 @@ export class ApiUtils {
 
     logger.info('Received API Response', {
       status: response.status(),
-      
+
       body: responseBody,
     });
 

@@ -2,7 +2,6 @@
   "name": "poc-api-automation",
   "version": "1.0.0",
   "description": "POC API Automation using Playwright and TypeScript",
-  "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
     "build": "tsc",
@@ -10,27 +9,20 @@
     "format": "prettier --write .",
     "test:ci": "playwright test --reporter=line"
   },
-  "keywords": [
-    "api",
-    "automation",
-    "playwright",
-    "typescript"
-  ],
-  "author": "Your Name",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "@playwright/test": "^1.49.1",
     "dotenv": "^16.4.7",
     "winston": "^3.17.0",
     "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
-    "@types/dotenv": "^6.1.1",
+    "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.2",
-    "@types/winston": "^2.4.4",
     "allure-commandline": "^2.32.0",
     "allure-playwright": "^3.0.7",
     "prettier": "^3.4.2",
